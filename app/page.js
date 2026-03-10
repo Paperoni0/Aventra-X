@@ -285,7 +285,7 @@ Ia tinggal di dalam jiwa
 Menuntun menuju nirwana suci`,
   },
   {
-    title: "Sumber Kehidupan ",
+    title: "Sumber Kehidupan",
     author: "Grand Firstdo Chen",
     image: "./assets/Grand.JPG",
     source: "",
@@ -373,7 +373,7 @@ Kini aku berani berkata nyata
 Aku cinta, tanpa banyak kata
 Jangan biarkan aku terlambat
 Sebelum kisah kita jadi luka`,
-  }
+  },
 ];
 
 export default function JunglePoetry() {
@@ -470,8 +470,11 @@ export default function JunglePoetry() {
         padding: "10px 24px 100px",
         position: "relative",
         zIndex: 1,
-        columns: "3 260px",
-        columnGap: "24px",
+        display: "grid",
+        gridTemplateColumns: "repeat(3, 1fr)",
+        gridAutoFlow: "row",
+        gap: "24px",
+        alignItems: "start",
       }}>
         {poems.map((poem, i) => (
           <div
@@ -489,10 +492,6 @@ export default function JunglePoetry() {
               opacity: 0,
               animationDelay: `${0.15 + i * 0.1}s`,
               animationFillMode: "forwards",
-              breakInside: "avoid",
-              marginBottom: "24px",
-              display: "inline-block",
-              width: "100%",
             }}
           >
             <div style={{ position: "relative", background: "#071507" }}>
@@ -509,7 +508,7 @@ export default function JunglePoetry() {
               ) : (
                 <img
                   className="card-img"
-                  src="/assets/default.png"
+                  src="./assets/default.png"
                   onError={() => setImgErrors(e => ({ ...e, [i]: true }))}
                   style={{
                     width: "100%", height: "auto", display: "block",
@@ -542,6 +541,7 @@ export default function JunglePoetry() {
           </div>
         ))}
       </main>
+
       {selected && (
         <div
           className="overlay-bg"
