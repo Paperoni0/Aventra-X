@@ -464,6 +464,8 @@ export default function JunglePoetry() {
           <div style={{ height: "1px", width: "80px", background: "linear-gradient(to left, transparent, #4ade80)" }} />
         </div>
       </header>
+
+      {/* CSS Grid: fills left→right row by row, each card sizes to its own image */}
       <main style={{
         maxWidth: "900px",
         margin: "0 auto",
@@ -471,7 +473,7 @@ export default function JunglePoetry() {
         position: "relative",
         zIndex: 1,
         display: "grid",
-        gridTemplateColumns: "repeat(3, 1fr)",
+        gridTemplateColumns: "repeat(auto-fill, minmax(260px, 1fr))",
         gridAutoFlow: "row",
         gap: "24px",
         alignItems: "start",
@@ -610,7 +612,7 @@ export default function JunglePoetry() {
                 color: "#d1fae5", fontFamily: "'Georgia', serif",
                 fontSize: "1rem", lineHeight: "2",
                 whiteSpace: "pre-wrap", margin: "0 0 28px",
-                opacity: 0.88, textAlign: "center",
+                opacity: 0.88, textAlign: "left",
               }}>
                 {selected.lyrics}
               </pre>
