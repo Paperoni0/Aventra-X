@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Kumpulan Puisi Kelas 10A",
-  description: "Semesta Memandang Kala Itu",
+  title: "Semesta Memandang Kala Itu",
+  description: "Kumpulan puisi karya anak kelas X.A Maitreyawira Palembang.",
 };
 
 export default function RootLayout({
