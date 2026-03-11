@@ -15,6 +15,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Semesta Memandang Kala Itu",
   description: "Kumpulan puisi karya anak kelas X.A Maitreyawira Palembang.",
+  manifest: "/manifest.json",
 };
 
 export default function RootLayout({

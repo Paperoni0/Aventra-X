@@ -1,5 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
+import { useDisableRightClick } from "../hooks/useDisableRightClick";
 
 const poems = [
   {
@@ -377,9 +378,21 @@ Sebelum kisah kita jadi luka`,
 ];
 
 export default function JunglePoetry() {
+  useDisableRightClick();
   const [selected, setSelected] = useState(null);
   const [visible, setVisible] = useState(false);
   const [imgErrors, setImgErrors] = useState({});
+  const [cols, setCols] = useState(3);
+
+  useEffect(() => {
+    const updateCols = () => {
+      const w = window.innerWidth;
+      setCols(w < 560 ? 1 : w < 820 ? 2 : 3);
+    };
+    updateCols();
+    window.addEventListener("resize", updateCols);
+    return () => window.removeEventListener("resize", updateCols);
+  }, []);
 
   useEffect(() => {
     setTimeout(() => setVisible(true), 100);
@@ -414,8 +427,8 @@ export default function JunglePoetry() {
           }} />
         ))}
         <svg style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", opacity: 0.07 }} xmlns="http://www.w3.org/2000/svg">
-          <path d="M0,0 Q100,200 0,400 Q100,600 0,800 Q100,1000 0,1200" stroke="#4ade80" strokeWidth="2" fill="none"/>
-          <path d="M80,0 Q180,300 80,600 Q180,900 80,1200" stroke="#86efac" strokeWidth="1.5" fill="none"/>
+          <path d="M0,0 Q100,200 0,400 Q100,600 0,800 Q100,1000 0,1200" stroke="#4ade80" strokeWidth="2" fill="none" />
+          <path d="M80,0 Q180,300 80,600 Q180,900 80,1200" stroke="#86efac" strokeWidth="1.5" fill="none" />
         </svg>
       </div>
       <style>{`
@@ -464,86 +477,93 @@ export default function JunglePoetry() {
           <div style={{ height: "1px", width: "80px", background: "linear-gradient(to left, transparent, #4ade80)" }} />
         </div>
       </header>
-
-      {/* CSS Grid: fills left→right row by row, each card sizes to its own image */}
       <main style={{
         maxWidth: "900px",
         margin: "0 auto",
         padding: "10px 24px 100px",
         position: "relative",
         zIndex: 1,
-        display: "grid",
-        gridTemplateColumns: "repeat(auto-fill, minmax(260px, 1fr))",
-        gridAutoFlow: "row",
-        gap: "24px",
-        alignItems: "start",
+        columns: `${cols} 260px`,
+        columnGap: "24px",
       }}>
-        {poems.map((poem, i) => (
-          <div
-            key={i}
-            className="card-hover"
-            onClick={() => setSelected(poem)}
-            style={{
-              cursor: "pointer",
-              background: "linear-gradient(160deg, rgba(8,30,8,0.95) 0%, rgba(12,40,12,0.9) 100%)",
-              border: "1px solid rgba(74,222,128,0.18)",
-              borderRadius: "16px",
-              overflow: "hidden",
-              boxShadow: "0 6px 30px rgba(0,0,0,0.5), inset 0 1px 0 rgba(74,222,128,0.08)",
-              animation: visible ? `fadeSlideUp 0.6s ease forwards` : "none",
-              opacity: 0,
-              animationDelay: `${0.15 + i * 0.1}s`,
-              animationFillMode: "forwards",
-            }}
-          >
-            <div style={{ position: "relative", background: "#071507" }}>
-              {!imgErrors[i] ? (
-                <img
-                  className="card-img"
-                  src={poem.image}
-                  onError={() => setImgErrors(e => ({ ...e, [i]: true }))}
-                  style={{
-                    width: "100%", height: "auto", display: "block",
-                    animation: "imgReveal 0.8s ease forwards",
-                  }}
-                />
-              ) : (
-                <img
-                  className="card-img"
-                  src="./assets/default.png"
-                  onError={() => setImgErrors(e => ({ ...e, [i]: true }))}
-                  style={{
-                    width: "100%", height: "auto", display: "block",
-                    animation: "imgReveal 0.8s ease forwards",
-                  }}
-                />
-              )}
-            </div>
-            <div style={{ padding: "16px 18px 18px" }}>
-              <p style={{
-                color: "#86efac", opacity: 0.55, margin: 0,
-                fontSize: "0.72rem", lineHeight: "1.5", fontStyle: "italic",
-              }}>
-                Sumber: {poem.source}
-              </p>
-              <div style={{ height: "1px", background: "linear-gradient(to right, rgba(74,222,128,0.3), transparent)", marginBottom: "10px" }} />
-              <h2 style={{
-                color: "#d1fae5", fontSize: "1.05rem", margin: "0 0 4px",
-                fontStyle: "italic", lineHeight: "1.3",
-              }}>
-                {poem.title}
-              </h2>
-              <p style={{
-                color: "#4ade80", opacity: 0.65, margin: "0 0 10px",
-                fontSize: "0.75rem", letterSpacing: "0.08em", textTransform: "uppercase",
-              }}>
-                — {poem.author}
-              </p>
-            </div>
-          </div>
-        ))}
+        {(() => {
+          const reordered = [];
+          for (let col = 0; col < cols; col++)
+            for (let row = col; row < poems.length; row += cols)
+              reordered.push(row);
+          return reordered.map((idx, i) => {
+            const poem = poems[idx];
+            return (
+              <div
+                key={idx}
+                className="card-hover"
+                onClick={() => setSelected(poem)}
+                style={{
+                  cursor: "pointer",
+                  background: "linear-gradient(160deg, rgba(8,30,8,0.95) 0%, rgba(12,40,12,0.9) 100%)",
+                  border: "1px solid rgba(74,222,128,0.18)",
+                  borderRadius: "16px",
+                  overflow: "hidden",
+                  boxShadow: "0 6px 30px rgba(0,0,0,0.5), inset 0 1px 0 rgba(74,222,128,0.08)",
+                  animation: visible ? `fadeSlideUp 0.6s ease forwards` : "none",
+                  opacity: 0,
+                  animationDelay: `${0.15 + i * 0.1}s`,
+                  animationFillMode: "forwards",
+                  breakInside: "avoid",
+                  marginBottom: "24px",
+                  display: "inline-block",
+                  width: "100%",
+                }}
+              >
+                <div style={{ position: "relative", background: "#071507" }}>
+                  {!imgErrors[i] ? (
+                    <img
+                      className="card-img"
+                      src={poem.image}
+                      onError={() => setImgErrors(e => ({ ...e, [i]: true }))}
+                      style={{
+                        width: "100%", height: "auto", display: "block",
+                        animation: "imgReveal 0.8s ease forwards",
+                      }}
+                    />
+                  ) : (
+                    <img
+                      className="card-img"
+                      src="./assets/default.png"
+                      onError={() => setImgErrors(e => ({ ...e, [i]: true }))}
+                      style={{
+                        width: "100%", height: "auto", display: "block",
+                        animation: "imgReveal 0.8s ease forwards",
+                      }}
+                    />
+                  )}
+                </div>
+                <div style={{ padding: "16px 18px 18px" }}>
+                  <p style={{
+                    color: "#86efac", opacity: 0.55, margin: 0,
+                    fontSize: "0.72rem", lineHeight: "1.5", fontStyle: "italic",
+                  }}>
+                    Sumber: {poem.source}
+                  </p>
+                  <div style={{ height: "1px", background: "linear-gradient(to right, rgba(74,222,128,0.3), transparent)", marginBottom: "10px" }} />
+                  <h2 style={{
+                    color: "#d1fae5", fontSize: "1.05rem", margin: "0 0 4px",
+                    fontStyle: "italic", lineHeight: "1.3",
+                  }}>
+                    {poem.title}
+                  </h2>
+                  <p style={{
+                    color: "#4ade80", opacity: 0.65, margin: "0 0 10px",
+                    fontSize: "0.75rem", letterSpacing: "0.08em", textTransform: "uppercase",
+                  }}>
+                    — {poem.author}
+                  </p>
+                </div>
+              </div>
+            );
+          });
+        })()}
       </main>
-
       {selected && (
         <div
           className="overlay-bg"
