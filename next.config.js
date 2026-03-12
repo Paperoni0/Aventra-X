@@ -4,7 +4,7 @@
 const isProd = process.env.NODE_ENV = 'production';
 
 const nextConfig = {
-  basePath: isProd ? '/Aventra-X' : '',
+  basePath: isProd ? '/xa' : '',
   output: 'export',
   distDir: 'dist',
   images: {
