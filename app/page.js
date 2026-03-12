@@ -6,7 +6,7 @@ const poems = [
   {
     title: "Jalan Memutar",
     author: "Abiyan Atilah Akbar",
-    image: "./assets/Abiyan.jpg",
+    image: "/xa/assets/Abiyan.jpg",
     source: "Pinterest",
     lyrics: `Kita tumbuh di lapangan yang sama
 Tentang mimpi yang tumbuh bersama
@@ -36,7 +36,7 @@ Yang sejalan denganku walau tidak di sisi yang sama`,
   {
     title: "Tempat Hangat Ku",
     author: "Alisa Adiratna",
-    image: "./assets/Alisa.jpg",
+    image: "/xa/assets/Alisa.jpg",
     source: "Google",
     lyrics: `Di meja kecil, hangat itu menunggu
 Menyadariku bahwa tak usah buru-buru
@@ -68,7 +68,7 @@ Menjalani hidup yang berat`,
   {
     title: "Saat Namamu Menjadi Rumah",
     author: "Alvanno Lorenszo Hersan",
-    image: "./assets/Alvanno.png",
+    image: "/xa/assets/Alvanno.png",
     source: "Canva",
     lyrics: `Di bawah langit yang diam menua bersama malam
 Kutemukan hangat di balik matamu yang tenang
@@ -98,7 +98,7 @@ Saat namamu membuat segalanya senang`,
   {
     title: "Ketika Langit Memilih Diam",
     author: "Angel Oktarini",
-    image: "./assets/Angel.jpg",
+    image: "/xa/assets/Angel.jpg",
     source: "Pinterest",
     lyrics: `Microchip pembawa telur mengitari pakan
 Menyusupi tiap-tiap sari yang kusebut rezeki
@@ -138,7 +138,7 @@ Ditelan tanpa arah, tanpa rumah`,
   {
     title: "Bisikan Alam",
     author: "Arini Dwi Syafiqa",
-    image: "./assets/Arini.jpg",
+    image: "/xa/assets/Arini.jpg",
     source: "",
     lyrics: `Mentari pagi menyapa bumi
 Burung bernyanyi di dahan pohon
@@ -168,7 +168,7 @@ Menjadi warisan penuh arti`,
   {
     title: "Tak Lagi Sama",
     author: "Aurelia Ryanlee",
-    image: "./assets/Aurelia.jpg",
+    image: "/xa/assets/Aurelia.jpg",
     source: "Pinterest",
     lyrics: `Dulu kita melangkah satu arah 
 Menghuni selasar sekolah 
@@ -198,7 +198,7 @@ Sederhana, apa adanya, sepanjang masa`,
   {
     title: "Dalam Doaku",
     author: "Brilliant Warren",
-    image: "./assets/Brilliant.JPG",
+    image: "/xa/assets/Brilliant.JPG",
     source: "Google",
     lyrics: `Setiap hari aku menyebut nama-Mu,
 Saat hati tenang maupun gelisah.
@@ -228,7 +228,7 @@ aku melangkah menata masa depan.`,
   {
     title: "Kasih di Atap yang Sama",
     author: "Excell Antolin",
-    image: "./assets/Excell.jpg",
+    image: "/xa/assets/Excell.jpg",
     source: "Google",
     lyrics: `Di bawah atap yang terasa teduh,
 Kita duduk berbagi cerita lama. 
@@ -258,7 +258,7 @@ Menjaga langkah agar tak tersesat.`,
   {
     title: "Langkah Menuju Pencerahan",
     author: "Gisella Eillen Dea",
-    image: "./assets/Gisella.jpg",
+    image: "/xa/assets/Gisella.jpg",
     source: "",
     lyrics: `Saat dunia terasa gelap 
 Kutemukan cahaya di hati 
@@ -288,7 +288,7 @@ Menuntun menuju nirwana suci`,
   {
     title: "Sumber Kehidupan",
     author: "Grand Firstdo Chen",
-    image: "./assets/Grand.JPG",
+    image: "/xa/assets/Grand.JPG",
     source: "",
     lyrics: `Jagad Raya memberikan kita banyak kehidupan
 Sandang pangan dan juga papan
@@ -318,7 +318,7 @@ Ketika jagad rusak kehidupan manusia pun musnah`,
   {
     title: "Pertemuan Kita",
     author: "Hartanto Hendry",
-    image: "./assets/Hartanto.jpg",
+    image: "/xa/assets/Hartanto.jpg",
     source: "Pinterest",
     lyrics: `Awalnya kita tak saling mengenal
 Hanya bertemu lalu tersenyum dengan wajah sederhana
@@ -348,7 +348,7 @@ Persahabatan terjaga selamanya`,
   {
     title: "Lupa Memberitahu",
     author: "Jan Jonathan Lion",
-    image: "./assets/Jan.jpg",
+    image: "/xa/assets/Jan.jpg",
     source: "Google",
     lyrics: `Di ujung senja aku menyimpan cerita
 Tentang rindu yang tak sempat terbaca
@@ -529,7 +529,7 @@ export default function JunglePoetry() {
                   ) : (
                     <img
                       className="card-img"
-                      src="./assets/default.png"
+                      src="/xa/assets/default.png"
                       onError={() => setImgErrors(e => ({ ...e, [i]: true }))}
                       style={{
                         width: "100%", height: "auto", display: "block",
