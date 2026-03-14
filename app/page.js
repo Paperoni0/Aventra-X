@@ -168,7 +168,7 @@ Menjadi warisan penuh arti`,
   {
     title: "Tak Lagi Sama",
     author: "Aurelia Ryanlee",
-    image: "/xa/assets/Aurelia.jpg",
+    image: "/assets/Aurelia.jpg",
     source: "Pinterest",
     lyrics: `Dulu kita melangkah satu arah 
 Menghuni selasar sekolah 
