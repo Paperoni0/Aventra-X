@@ -168,7 +168,7 @@ Menjadi warisan penuh arti`,
   {
     title: "Tak Lagi Sama",
     author: "Aurelia Ryanlee",
-    image: "/assets/Aurelia.jpg",
+    image: "/xa/assets/Aurelia.jpg",
     source: "Pinterest",
     lyrics: `Dulu kita melangkah satu arah 
 Menghuni selasar sekolah 
@@ -388,7 +388,10 @@ export default function Page() {
   const [selected, setSelected] = useState(null);
   const [visible, setVisible] = useState(false);
   const [imgErrors, setImgErrors] = useState({});
-  const [cols, setCols] = useState(3);
+  const [cols, setCols] = useState(() => {
+    if (typeof window === "undefined") return 3;
+    return window.innerWidth < 560 ? 1 : window.innerWidth < 820 ? 2 : 3;
+  });
 
   useEffect(() => {
     const updateCols = () => {
