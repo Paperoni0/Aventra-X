@@ -1277,7 +1277,7 @@ export default function Page() {
           >
             <div style={{ position: "relative", height: "220px", overflow: "hidden", borderRadius: "22px 22px 0 0" }}>
               <img
-                src={selected.image}
+                src={getImageSrc(selected)}
                 alt={selected.title}
                 style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
                 onError={(e) => { e.target.style.display = "none"; }}
