@@ -1361,7 +1361,7 @@ export default function Page() {
           margin: 0,
           fontStyle: "italic",
         }}>
-          © {new Date().getFullYear()} Kelas 10A — Semesta Memandang Kala Itu. All rights reserved.
+          © {new Date().getFullYear()} Kelas 10A Angkatan 9 Maitreyawira Palembang — Semesta Memandang Kala Itu. All rights reserved.
         </p>
       </footer>
     </div>
