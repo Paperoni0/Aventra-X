@@ -8,7 +8,8 @@ const poems = [
     author: "Abiyan Atilah Akbar",
     image: "/assets/Abiyan.jpg",
     source: "Pinterest",
-    lyrics: `Kita tumbuh di lapangan yang sama
+    lyrics: `
+Kita tumbuh di lapangan yang sama
 Tentang mimpi yang tumbuh bersama
 Tak lupa dengan tawa kecil yang selalu ada
 Menemani langkah di setiap harapan
@@ -375,12 +376,19 @@ Aku cinta, tanpa banyak kata
 Jangan biarkan aku terlambat
 Sebelum kisah kita jadi luka`,
   },
+  {
+    title: "",
+    author: "",
+    image: "/assets/.jpg",
+    source: "",
+    lyrics: ``,
+  },
 ];
 
 export default function Page() {
   useEffect(() => {
     if (window.location.hostname.includes("paperoni0.github.io")) {
-      window.location.replace("https://batch9mw.qzz.io/xa");
+      window.location.replace("https://batch9mw.home.kg/xa");
     }
   }, []);
   
@@ -662,6 +670,30 @@ export default function Page() {
           </div>
         </div>
       )}
+      <footer style={{
+        position: "relative",
+        zIndex: 1,
+        textAlign: "center",
+        padding: "32px 20px 28px",
+        borderTop: "1px solid rgba(74,222,128,0.15)",
+        marginTop: "-40px",
+      }}>
+        <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "12px", marginBottom: "14px" }}>
+          <div style={{ height: "1px", width: "60px", background: "linear-gradient(to right, transparent, #4ade80)" }} />
+          <span style={{ color: "#4ade80", opacity: 0.5, fontSize: "0.9rem" }}>✦</span>
+          <div style={{ height: "1px", width: "60px", background: "linear-gradient(to left, transparent, #4ade80)" }} />
+        </div>
+        <p style={{
+          color: "#4ade80",
+          opacity: 0.55,
+          fontSize: "0.75rem",
+          letterSpacing: "0.1em",
+          margin: 0,
+          fontStyle: "italic",
+        }}>
+          © {new Date().getFullYear()} Kelas 10A — Semesta Memandang Kala Itu. All rights reserved.
+        </p>
+      </footer>
     </div>
   );
 }
