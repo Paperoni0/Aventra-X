@@ -6,7 +6,7 @@ const poems = [
   {
     title: "Lara Temaram",
     author: "Regina Laoshi",
-    image: "/assets/Laoshi.jpg",
+    image: "/assets/Laoshi.webp",
     source: "Regina Laoshi",
     lyrics: `Langit sore tersenyum merekah padaku
 Bibir senja memerah melihatku menahan rindu
@@ -718,7 +718,7 @@ Sebagai dua jiwa yang saling mecinta, selamanya`,
   {
     title: "Sang Pengasih",
     author: "Laurensius Richard Leonard",
-    image: "/assets/Richard.jpg",
+    image: "/assets/Richard.webp",
     source: "Google",
     lyrics: `Bapa engkau adalah penyelamatku
 Saat aku terluka engkau melindungiku
@@ -782,7 +782,7 @@ Melewati setiap jejak langkah`,
   {
     title: "Persahabatan",
     author: "M. Dzaka Zufaraid Pratama",
-    image: "/assets/Dzaka.jpg",
+    image: "/assets/Dzaka.webp",
     source: "Google",
     lyrics: `Di antara riuh hari yang kadang melelahkan
 Ada namamu yang selalu terasa pulang
@@ -938,6 +938,7 @@ Alam raya, sumber kehidupan sejati`,
   {
     title: "Tempat Berlabuh",
     author: "Skolastica Selyn Setiawan",
+    image: "/assets/Selyn.webp",
     source: "Pinterest",
     lyrics: `Bukan tentang siapa yang pertama datang
 Atau siapa yang paling lama menetap
