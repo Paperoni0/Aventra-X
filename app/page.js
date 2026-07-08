@@ -4,12 +4,40 @@ import { useDisableRightClick } from "../hooks/useDisableRightClick";
 
 const poems = [
   {
+    title: "Lara Temaram",
+    author: "Regina Laoshi",
+    image: "/assets/Laoshi.jpg",
+    source: "Regina Laoshi",
+    lyrics: `Langit sore tersenyum merekah padaku
+Bibir senja memerah melihatku menahan rindu
+Tentang hadirmu yang selalu semu
+Kupeluk bayangmu dalam malam yang bisu
+
+Pada debur ombak pantai yang menenangkan
+Kugantungkan hatiku pada paku kenangan
+Tentang buku bahasa kalbu menyimpan sejuta kerinduan
+Dan aku mengeja namamu dalam bahasa kehilangan
+
+Bila esok fajar mengetuk tanpa suara
+Izinkan aku untuk tetap tinggal meski sementara
+Sebab jatuh hati padamu adalah patah hati yang tak disengaja 
+Kutemukan diriku hilang, namun masih mencinta
+
+Bertemu denganmu tidak pernah ada dalam rencana
+Ketidaksengajaan yang sama sekali tak pernah kutanyakan kepada pemilik semesta
+Dan aku berusaha mengukir kisah dengan tinta yang paling bercahaya
+Walau hanya bisa menatapmu dari balik jendela kata
+
+Kucoba merajut asa dari serpih waktu
+Namun yang kudapat luka penuh pilu
+Sajak-sajak ini akan tetap berhujan membasahi perjalananku
+Sebab patah tak selalu berarti layu, kadang ia mengajarkan hati untuk utuh kembali, perlahan dan syahdu.`,
+  },
+  {
     title: "Jalan Memutar",
     author: "Abiyan Atilah Akbar",
-    image: "/assets/Abiyan.jpg",
     source: "Pinterest",
-    lyrics: `
-Kita tumbuh di lapangan yang sama
+    lyrics: `Kita tumbuh di lapangan yang sama
 Tentang mimpi yang tumbuh bersama
 Tak lupa dengan tawa kecil yang selalu ada
 Menemani langkah di setiap harapan
@@ -37,7 +65,6 @@ Yang sejalan denganku walau tidak di sisi yang sama`,
   {
     title: "Tempat Hangat Ku",
     author: "Alisa Adiratna",
-    image: "/assets/Alisa.jpg",
     source: "Google",
     lyrics: `Di meja kecil, hangat itu menunggu
 Menyadariku bahwa tak usah buru-buru
@@ -69,7 +96,6 @@ Menjalani hidup yang berat`,
   {
     title: "Saat Namamu Menjadi Rumah",
     author: "Alvanno Lorenszo Hersan",
-    image: "/assets/Alvanno.png",
     source: "Canva",
     lyrics: `Di bawah langit yang diam menua bersama malam
 Kutemukan hangat di balik matamu yang tenang
@@ -99,7 +125,6 @@ Saat namamu membuat segalanya senang`,
   {
     title: "Ketika Langit Memilih Diam",
     author: "Angel Oktarini",
-    image: "/assets/Angel.jpg",
     source: "Pinterest",
     lyrics: `Microchip pembawa telur mengitari pakan
 Menyusupi tiap-tiap sari yang kusebut rezeki
@@ -139,8 +164,7 @@ Ditelan tanpa arah, tanpa rumah`,
   {
     title: "Bisikan Alam",
     author: "Arini Dwi Syafiqa",
-    image: "/assets/Arini.jpg",
-    source: "",
+    source: "Pinterest",
     lyrics: `Mentari pagi menyapa bumi
 Burung bernyanyi di dahan pohon
 Cahaya hangat menyentuh bumi
@@ -169,7 +193,6 @@ Menjadi warisan penuh arti`,
   {
     title: "Tak Lagi Sama",
     author: "Aurelia Ryanlee",
-    image: "/assets/Aurelia.jpg",
     source: "Pinterest",
     lyrics: `Dulu kita melangkah satu arah 
 Menghuni selasar sekolah 
@@ -197,9 +220,67 @@ Rasa tulus tanpa mengenal kata "pergi"
 Sederhana, apa adanya, sepanjang masa`,
   },
   {
+    title: "Hampa",
+    author: "Bernard Frederich Mok",
+    source: "Pinterest",
+    lyrics: `Di tempat ini, tempatku menaruh
+Tempatku bertaut teduh..
+Engkau seperti rumah...
+yang perlahan kehilangan arah
+
+Walau hatinya kosong dan gelap
+Ada lampu yang mengajak kamu
+Main kau ikutin jalan-jalan
+Terus berjalan
+
+Kau rasa capek tapi kau lanjut
+Mengikuti lampu itu lampunya
+Ketawa-tawa dengan senang hati
+Jalan-berjalan
+
+Selanjutnya sinar matahari
+Menyakiti matamu dan akhirnya 
+Lampu yang kau ikuti telah
+Menunjukkanmu bahwa
+Kamu tidak pernah sendirian
+
+Orang yang dekat denganmu
+Peluk mu walaupun
+Waktu bisa kejam tetap
+Habiskan dengan orang kamu`,
+  },
+  {
+    title: "Lembaran baru",
+    author: "Brandon Lucky Niu Septian",
+    source: "Pinterest",
+    lyrics: `Aku menutup buku yang usang
+Penuh coretan dan luka lama
+Kini hadirmu datang memelang
+Membawa pena dengan warna utama
+
+Kertas putih kini terbuka
+Menanti kisah yang akan dituliskan
+Tak ada lagi bayang-bayang duka
+Hanya ada binar yang terpancarkan
+
+Tiap kata adalah benih yang tumbuh
+Menyusun kalimat tentang rasa percaya
+Kau basah perih hingga benar-benar luluh,
+Mengubah gulita jadi cahaya.
+
+Kita mulai bab dengan rindu
+Dimana setiap barisnya adalah janji.
+Tak perlu lagi ada ragu yang membelenggu
+Sebab hatiku telah kau singgahi.
+
+Cinta ini berseni di atas aksara
+Mekar abadi dalam setiap kertas
+Menjadi cerita paling indah tiada tara
+Kisah manis yang tak terbatas`,
+  },
+  {
     title: "Dalam Doaku",
     author: "Brilliant Warren",
-    image: "/assets/Brilliant.JPG",
     source: "Google",
     lyrics: `Setiap hari aku menyebut nama-Mu,
 Saat hati tenang maupun gelisah.
@@ -227,9 +308,66 @@ Dengan iman sebagai pegangan,
 aku melangkah menata masa depan.`,
   },
   {
+    title: "Semesta",
+    author: "Cheryl Cleo",
+    source: "Pinterest",
+    lyrics: `Pagi hari matahari bersinar 
+Menyinari bumi dengan cerah 
+Embun jatuh di daun-daun segar
+Menambah indah suasana alam raya
+
+Langit biru tampak cerah 
+Awan putih bergerak perlahan 
+Burung bernyanyi penuh ceria 
+Menyambut pagi dengan bahagia
+
+Pepohonan hijau berdiri tegak 
+Memberi teduh bagi kehidupan 
+Angin sepoi berhembus kencang 
+Membawa damai dan ketenangan
+
+Sungai mengalir jernih dan tenang
+Menjadi sumber bagi semua makhluk-Nya
+Ikan berenang bebas riang 
+Di alam yang harus kita jaga
+
+Alam adalah karunia Tuhan 
+Wajib dijaga sepanjang masa
+Dengan rasa cinta dan kepedulian 
+Seluas alam semesta yang tiada bandingnya`,
+  },
+  {
+    title: "Sahabat di Setiap Langkah",
+    author: "Darwin Jonathan",
+    source: "Pinterest",
+    lyrics: `Di sudut pagi yang masih berembun,
+kau hadir dengan senyum sederhana,
+menghapus ragu yang sempat berlabuh
+di hati yang lelah oleh dunia.
+
+Kita pernah jatuh di jalan yang sama,
+lutut terluka, mimpi pun retak,
+namun genggamanmu tak pernah lepas,
+menguatkan langkah yang hampir sesak.
+
+Persahabatan bukan tentang tawa saja,
+bukan pula sekadar cerita ringan,
+ia tumbuh dari saling percaya,
+berakar dalam kejujuran dan ketulusan.
+
+Jika nanti waktu memisahkan jarak,
+biarlah kenangan jadi jembatan,
+karena sahabat sejati tak hilang oleh ruang,
+ia tinggal, menetap, di dalam kenangan.
+
+Di setiap langkah yang akan kita tempuh,
+meski arah berbeda membentang,
+semoga mimpi-mimpi kita tetap bertemu,
+di puncak harapan yang sama-sama kita perjuangkan.`,
+  },
+  {
     title: "Kasih di Atap yang Sama",
     author: "Excell Antolin",
-    image: "/assets/Excell.jpg",
     source: "Google",
     lyrics: `Di bawah atap yang terasa teduh,
 Kita duduk berbagi cerita lama. 
@@ -257,10 +395,38 @@ Yang tumbuh subur tanpa syarat,
 Menjaga langkah agar tak tersesat.`,
   },
   {
+    title: "Puisi Untukmu",
+    author: "Federico Nathan Bustan",
+    source: "XiaoHongShu",
+    lyrics: `Oktober turun bersama hujan yang pelan
+Langit menyimpan namamu dalam ingatan
+Di sela waktu muncul terang yang enggan
+Seperti April singgah tanpa perkenalan
+
+Ada cahaya berdiam di sepasang mata
+Detak memilih bersembunyi di dada
+Perasaan tubuh tanpa pernah berkata
+Takut terpisah sebelum tiba waktunya
+
+Langkah mendekat, niatku kian tertahan
+Kata cinta karam di laut keraguan
+Aku berpaling dari sebuah pengakuan
+Takut kehilangan sebelum keberanian
+
+Kita dua arus di samudra yang luas
+Bertemu tanpa mencari, lalu terpisah
+Jika kau belum siap untuk berlabu sejenak
+Aku akan tinggal sebagai ombak yang rela
+
+Di Januari kutitipkan rindu yang bisu
+Waktu menjadi saksi janji yang semu
+Puisi ini hadir sebagai isyarat untukmu
+Bahwa aku di sini menunggumu`,
+  },
+  {
     title: "Langkah Menuju Pencerahan",
     author: "Gisella Eillen Dea",
-    image: "/assets/Gisella.jpg",
-    source: "",
+    source: "Pinterest",
     lyrics: `Saat dunia terasa gelap 
 Kutemukan cahaya di hati 
 Bukan dari langit yang tinggi 
@@ -289,8 +455,7 @@ Menuntun menuju nirwana suci`,
   {
     title: "Sumber Kehidupan",
     author: "Grand Firstdo Chen",
-    image: "/assets/Grand.JPG",
-    source: "",
+    source: "Google",
     lyrics: `Jagad Raya memberikan kita banyak kehidupan
 Sandang pangan dan juga papan
 Rimba luas menghasilkan napas bagi bumi pertiwi
@@ -319,7 +484,6 @@ Ketika jagad rusak kehidupan manusia pun musnah`,
   {
     title: "Pertemuan Kita",
     author: "Hartanto Hendry",
-    image: "/assets/Hartanto.jpg",
     source: "Pinterest",
     lyrics: `Awalnya kita tak saling mengenal
 Hanya bertemu lalu tersenyum dengan wajah sederhana
@@ -345,6 +509,37 @@ Walau waktu dan jarak menghalangi
 Ikatan ini tak akan terpisahi
 Dari pertemuan yang sederhana
 Persahabatan terjaga selamanya`,
+  },
+  {
+    title: "Dewasa Penuh Luka",
+    author: "Ivan Octaviansa",
+    source: "Google",
+    lyrics: `Bagaikan surga untuk kita semua
+Hal itu tercipta karena adanya kehangatan
+Bagaikan air dan minyak yang tidak bisa bersama
+Hingga akhirnya tidak semua keluarga itu adalah rumah untuk bercerita
+
+Keluarga tetap keluarga
+Bagaimana bisa aku terluka
+Berbekalan sejuta kesedihan
+Mengiringi setiap langkah ku
+Menguji semangat jiwaku
+
+Karena luka ini, pada akhirnya aku jadi tau arti dari kesabaran
+Siapa sangka dewasa yang kukira menyenangkan ternyata sangat menyakitkan
+Rumah yang dianggap tempat pulang menjadi teman yang menyimpan luka paling dalam
+Suara, canda tawa, senyum di muka, semua menghilang tanpa sisa
+
+Rumahnya tetap ada, tapi isinya sudah tak sama
+Kadang aku iri pada rumah lain
+Yang hangat nya terasa dari luar jendela
+Namun dari perpecahan ini aku belajar
+Kita bisa menjadi kuat karena kehilangan
+
+Dan meski rumahku tak lagi utuh
+Aku masih percaya pada kata “harapan”
+Dari runtuhnya cinta yang pernah ada
+Aku membangun diriku sendiri-perlahan, tapi nyata`,
   },
   {
     title: "Lupa Memberitahu",
@@ -375,6 +570,198 @@ Kini aku berani berkata nyata
 Aku cinta, tanpa banyak kata
 Jangan biarkan aku terlambat
 Sebelum kisah kita jadi luka`,
+  },
+  {
+    title: "Di Bawah Cahaya-Mu",
+    author: "Jason Gunawan",
+    image: "/assets/Jason.jpg",
+    source: "Pinterest",
+    lyrics: `Di bawah cahaya-Mu aku bersujud,
+membaca doa pada denyut waktu,
+hati yang lelah Kau tenangkan lembut,
+dalam sunyi, Engkau selalu tahu.
+
+Langit mengajariku tentang pasrah,
+awan berlalu, hujan pun reda,
+aku belajar ikhlas dan tabah,
+menyebut nama-Mu di setiap jeda.
+
+Ketika langkah goyah oleh dunia,
+iman menjadi pelita jalan,
+dosa kuhitung, ampun kupinta,
+harap tumbuh di taman pengharapan.
+
+Dalam sabar Kau titipkan makna,
+bahwa luka bukan akhir cerita,
+setiap takdir adalah cinta,
+yang Kau tulis dengan penuh hikmah.
+
+Tuhan, terimalah doa sederhana,
+jadikan hidup bernilai ibadah,
+hingga akhir nafasku tiba,
+aku pulang dengan hati berserah.`,
+  },
+  {
+    title: "Gunung Hijau yang Terlupakan",
+    author: "Josepaulo Chandra",
+    image: "/assets/Jose.jpg",
+    source: "Pinterest",
+    lyrics: `Di puncak bukit yang berembun pagi
+Mentari menyapa dengan rona keemasan
+Dedaunan menari saat angin pesisir kembali
+Membisikkan mesra salam pembuka hati
+
+Sungai kecil mengalir di sela batu,
+membawa cerita gunung menuju muara
+ikan-ikan sibuk di balik lumut yang biSa,
+Bersembunyi tenang di sela air yang jernih.
+
+Kala hujan jatuh menyentuh tanah haus
+Aroma petrikor memenuhi rongga dada
+Burung kecil merapat di dahan yang tulus
+Menanti pelangi kala badai telah reda
+
+Hutan rimba adalah napas bagi nyawa
+Tempat rahasia ribuan makhluk berkembang
+Namun tangan manusia sering kali buta,
+Menghanguskan hijau jadi debu yang gersang
+
+Wahai penghuni bumi, jagalah warisan ini,
+Jangan biarkan alam merintih dalam sepi,
+Tanpa rimba, tak ada udara untuk bernapas lagi
+Jangan biarkan cucu mewarisi sesal di hati.`,
+  },
+  {
+    title: "Sahabat, Bintang di Awan-awan",
+    author: "Keiko Trisia Zily",
+    image: "/assets/Keiko.jpg",
+    source: "Google",
+    lyrics: `Kala badai datang menerjang
+Kau hadir membawa terang
+Duka lara hilang melayang
+Kasih sahabat takkan berkurang
+
+Meski jalan berliku tajam 
+Semangat kita takkan padam 
+Rindu memburu di malam kelam
+Kenangan indah tersimpan diam
+
+Tawa pecah di sela canda 
+Menghapus duka yang ada di dada
+Walau usia terus berbeda 
+Jiwa sahabat tetaplah ada 
+
+Kini jarak membentang luas 
+Namun rindu tak pernah puas
+Persahabatan ini sangat setia 
+Menyinnari langkahku setiap waktu tiba
+
+Terima kasih wahai kawan 
+Engkaulah bintang di awan-awan 
+Hati tulus seindah zaman 
+Abadi di setiap jalan`,
+  },
+  {
+    title: "Pelita Harapanku",
+    author: "Keisha Clarissa",
+    image: "/assets/Keisha.jpg",
+    source: "Pinterest",
+    lyrics: `Ibu, kaulah cahaya dalam hidupku
+Bahkan sejak aku lahir, kau selalu bersamaku
+Ibu, dengan kasih sayang tulusmu
+Kau jaga dan rawat aku selalu
+
+Setiap pagi sebelum aku bangun 
+Kau sudah lebih dulu menyiapkan segalanya
+Tenagamu tertumpah untuk keluarga
+Walau lelah selalu kau rasakan
+
+Ketika aku sedih dan hampir menyerah
+Kau selalu ada di sisiku
+Kata-katamu menguatkan diriku 
+dan membuatku bangkit kembali teguh
+
+Ibu, kau ajarkan aku arti sabar
+Tentang ikhlas dan hati yang benar
+Lewat teladan yang kau sebar
+Aku tumbuh menjadi tegar
+
+Terima kasih, ibu tercinta
+atas kasih yang tak pernah kau minta kembali
+Doa-doamu adalah pelita cahaya
+Yang diam-diam menuntunku menjadi aku hari ini`,
+  },
+  {
+    title: "Ketika Syal Menggantikan Pelukanmu",
+    author: "Khayla Putri Arthamiharja",
+    image: "/assets/Khayla.jpg",
+    source: "Pinterest",
+    lyrics: `Langit senja menua di ujung cakrawala
+Menyimpan wajahmu dalam cahaya yang perlahan mereda
+Ombak bernapas lirih di pantai yang sepi
+Setenang caramu mencinta, tanpa pernah berjanji
+
+Aku duduk bernyanyi di pasir basah
+Air mata iatuh, larut bersama resah
+Kusadari kini, dengan dada kelu membisu
+Tak akan ada lagi dunia mengizinkanku memelukmu
+
+Kuselimuti diri dengan syal pemberian terakhirmu
+Kain sederhana, namun hangat oleh rindumu
+Kupeluk sval itu sekuat aku bisa
+Menangis tanpa sisa, tanpa jeda
+
+Kutoleh kembali pada syal itu, tersenyum dalam tangis
+Kenangan mengalir, manis sekaligus tragis
+Setiap seratnya menyimpan kisah kita
+Cinta yang indah, namun tak sempat menua
+
+Kau bilang cinta kita tak akan mati
+Ia abadi menunggu di kehidupan nanti
+Biarlah kita bertemu tanpa air mata
+Sebagai dua jiwa yang saling mecinta, selamanya`,
+  },
+  {
+    title: "",
+    author: "",
+    image: "/assets/.jpg",
+    source: "",
+    lyrics: ``,
+  },
+  {
+    title: "",
+    author: "",
+    image: "/assets/.jpg",
+    source: "",
+    lyrics: ``,
+  },
+  {
+    title: "",
+    author: "",
+    image: "/assets/.jpg",
+    source: "",
+    lyrics: ``,
+  },
+  {
+    title: "",
+    author: "",
+    image: "/assets/.jpg",
+    source: "",
+    lyrics: ``,
+  },
+  {
+    title: "",
+    author: "",
+    image: "/assets/.jpg",
+    source: "",
+    lyrics: ``,
+  },
+  {
+    title: "",
+    author: "",
+    image: "/assets/.jpg",
+    source: "",
+    lyrics: ``,
   },
   {
     title: "",
