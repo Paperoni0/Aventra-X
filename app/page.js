@@ -1137,7 +1137,7 @@ export default function Page() {
         .banner { position: relative; width: 100%; height: clamp(220px, 40vh, 420px); overflow: hidden; z-index: 1 }
         @media (min-width: 1024px) { .banner { height: clamp(300px, 45vh, 500px) } }
         .banner img { width: 100%; height: 100%; object-fit: cover; object-position: center 60%; display: block; }
-        .banner::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(10,31,10,0.15) 0%, rgba(10,31,10,1) 100%); z-index: 2; }
+        .banner::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(10,31,10,0.15) 0%, rgba(10,31,10,1) 100%); z-index: 0; }
         .card-hover { transition: all 0.35s cubic-bezier(0.34,1.56,0.64,1); }
         .card-hover:hover { transform: translateY(-8px) scale(1.015); box-shadow: 0 16px 48px rgba(0,0,0,0.6), 0 0 30px rgba(74,222,128,0.12) !important; }
         .card-hover:hover .card-img { transform: scale(1.06); }
