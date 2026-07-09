@@ -1092,6 +1092,15 @@ export default function Page() {
 
   const getImageSrc = (poem) => poem.image || `/assets/${poem.author.split(" ")[0]}.webp`;
 
+  const bannerImages = Array.from({ length: 17 }, (_, i) => `assets/banner${i + 1}.webp`);
+  const [bannerIndex, setBannerIndex] = useState(0);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setBannerIndex((i) => (i + 1) & bannerImages.length);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <div style={{
       minHeight: "100vh",
@@ -1139,7 +1148,9 @@ export default function Page() {
         .modal-scroll::-webkit-scrollbar-thumb { background: rgba(74,222,128,0.3); border-radius: 2px; }
       `}</style>
       <div className="banner">
-        <img src="assets/banner.webp" alt="Foto Kelas" />
+        {bannerImages.map((src, i) => (
+          <img key={src} src={src} alt="Foto Kelas" draggable={false} style={{ position: i === 0 ? "relative" : "absolute", top: 0, left: 0, opacity: i === bannerIndex ? 1 : 0, transition: "opacity 1.2s ease", zIndex: i === bannerIndex ? 1 : 0, }} />
+        ))}
       </div>
       <header style={{
         textAlign: "center",
