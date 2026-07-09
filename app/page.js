@@ -1150,7 +1150,7 @@ export default function Page() {
       `}</style>
       <div className="banner" style={{ position: "relative", overflow: "hidden" }}>
         {bannerImages.map((src, i) => (
-          <div key={src} style={{ position: i === 0, "relative" : "absolute", inset: 0, width: "100%", height: "100%", opacity: i === bannerIndex ? 1 : 0, transition: "opacity 1.2s ease", zIndex: i === bannerIndex ? 1 : 0, }}>
+          <div key={src} style={{ position: i === 0 ? "relative" : "absolute", inset: 0, width: "100%", height: "100%", opacity: i === bannerIndex ? 1 : 0, transition: "opacity 1.2s ease", zIndex: i === bannerIndex ? 1 : 0, }}>
             <img src={src} aria-hidden="true" draggable={false} style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", filter: "blur(24px) brightness(0.6)", transform: "scale(1.15)", }} />
             <img src={src} alt="Foto Kelas" draggable={false} style={{ position: "relative", width: "100%", height: "100%", objectFit: "contain", }} />
           </div>
