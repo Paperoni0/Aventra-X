@@ -1125,6 +1125,9 @@ export default function Page() {
         @keyframes modalIn { from { opacity:0; transform:scale(0.92) translateY(24px); } to { opacity:1; transform:scale(1) translateY(0); } }
         @keyframes titleIn { from { opacity:0; letter-spacing:0.5em; } to { opacity:1; letter-spacing:0.15em; } }
         @keyframes imgReveal { from { opacity:0; transform:scale(1.05); } to { opacity:1; transform:scale(1); } }
+        .banner { position: relative; width: 100%; height: 300px; overflow: hidden; z-index: 1 }
+        .banner img { width: 100%; height: 100%; object-fit: cover; object-position: center 60%; display: block; }
+        .banner::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(10,31,10,0.15) 0%, rgba(10,31,10,1) 100%) }
         .card-hover { transition: all 0.35s cubic-bezier(0.34,1.56,0.64,1); }
         .card-hover:hover { transform: translateY(-8px) scale(1.015); box-shadow: 0 16px 48px rgba(0,0,0,0.6), 0 0 30px rgba(74,222,128,0.12) !important; }
         .card-hover:hover .card-img { transform: scale(1.06); }
@@ -1135,6 +1138,9 @@ export default function Page() {
         .modal-scroll::-webkit-scrollbar-track { background: transparent; }
         .modal-scroll::-webkit-scrollbar-thumb { background: rgba(74,222,128,0.3); border-radius: 2px; }
       `}</style>
+      <div className="banner">
+        <img src="assets/banner.webp" alt="Foto Kelas" />
+      </div>
       <header style={{
         textAlign: "center",
         padding: "60px 20px 40px",
