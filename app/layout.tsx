@@ -13,11 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://aventrax.sytes.net"),
-  title: {
-    default: "Aventra-X",
-    template: "%s | Aventra-X"
-  },
+  title: "Aventra-X",
   description: "Kelas 10A (X.A) SMA Maitreyawira Palembang",
 };
 
