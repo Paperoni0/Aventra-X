@@ -1,6 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
-import { useDisableRightClick } from "../hooks/useDisableRightClick";
+import { useDisableRightClick } from "../../hooks/useDisableRightClick";
 
 const poems = [
     {
