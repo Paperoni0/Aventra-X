@@ -1094,12 +1094,21 @@ export default function Page() {
 
   const bannerImages = Array.from({ length: 17 }, (_, i) => `assets/banner${i + 1}.webp`);
   const [bannerIndex, setBannerIndex] = useState(0);
+  const [loadedBanners, setLoadedBanners] = useState(() => new Set([0, 1 % bannerImages.length]));
   useEffect(() => {
     const interval = setInterval(() => {
       setBannerIndex((i) => (i + 1) % bannerImages.length);
     }, 4000);
     return () => clearInterval(interval);
   }, []);
+  useEffect(() => {
+    setLoadedBanners((prev) => {
+      const next = new Set(prev);
+      next.add(bannerIndex);
+      next.add((bannerIndex + 1) % bannerImages.length);
+      return next;
+    });
+  }, [bannerIndex, bannerImages.length]);
 
   return (
     <div style={{
@@ -1134,10 +1143,10 @@ export default function Page() {
         @keyframes modalIn { from { opacity:0; transform:scale(0.92) translateY(24px); } to { opacity:1; transform:scale(1) translateY(0); } }
         @keyframes titleIn { from { opacity:0; letter-spacing:0.5em; } to { opacity:1; letter-spacing:0.15em; } }
         @keyframes imgReveal { from { opacity:0; transform:scale(1.05); } to { opacity:1; transform:scale(1); } }
-        .banner { position: relative; width: 100%; height: clamp(220px, 40vh, 420px); overflow: hidden; z-index: 1 }
+        .banner { position: relative; width: 100%; height: clamp(220px, 40vh, 420px); overflow: hidden; z-index: 1; }
         @media (min-width: 1024px) { .banner { height: clamp(300px, 45vh, 500px) } }
         .banner img { width: 100%; height: 100%; object-fit: cover; object-position: center 60%; display: block; }
-        .banner::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(10,31,10,0.15) 0%, rgba(10,31,10,1) 100%); z-index: 2; display: none }
+        .banner::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(10,31,10,0.15) 0%, rgba(10,31,10,1) 100%); z-index: 2; }
         .card-hover { transition: all 0.35s cubic-bezier(0.34,1.56,0.64,1); }
         .card-hover:hover { transform: translateY(-8px) scale(1.015); box-shadow: 0 16px 48px rgba(0,0,0,0.6), 0 0 30px rgba(74,222,128,0.12) !important; }
         .card-hover:hover .card-img { transform: scale(1.06); }
@@ -1150,9 +1159,13 @@ export default function Page() {
       `}</style>
       <div className="banner" style={{ position: "relative", overflow: "hidden" }}>
         {bannerImages.map((src, i) => (
-          <div key={src} style={{ position: i === 0 ? "relative" : "absolute", inset: 0, width: "100%", height: "100%", opacity: i === bannerIndex ? 1 : 0, transition: "opacity 1.2s ease", zIndex: i === bannerIndex ? 1 : 0, }}>
-            <img src={src} aria-hidden="true" draggable={false} style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", filter: "blur(24px) brightness(0.6)", transform: "scale(1.15)", }} />
-            <img src={src} alt="Foto Kelas" draggable={false} style={{ position: "relative", width: "100%", height: "100%", objectFit: "contain", }} />
+          <div key={src} style={{ position: i === 0 ? "relative" : "absolute", inset: 0, width: "100%", height: "100%", opacity: i === bannerIndex ? 1 : 0, transition: "opacity 1.2s ease", zIndex: i === bannerIndex ? 1 : 0, background: "#0a1f0a", }}>
+            {loadedBanners.has(i) && (
+              <>
+                <img src={src} aria-hidden="true" draggable={false} style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", filter: "blur(24px) brightness(0.6)", transform: "scale(1.15)", }} />
+                <img src={src} alt="Foto Kelas" draggable={false} style={{ position: "relative", width: "100%", height: "100%", objectFit: "contain", }} />
+              </>
+            )}
           </div>
         ))}
       </div>
@@ -1228,6 +1241,8 @@ export default function Page() {
                   {!imgErrors[i] ? (
                     <img
                       className="card-img"
+                      loading="lazy"
+                      decoding="async"
                       src={!imgErrors[i] ? getImageSrc(poem) : "/xa/assets/default.webp"}
                       onError={() => setImgErrors(e => ({ ...e, [i]: true }))}
                       style={{
@@ -1238,6 +1253,8 @@ export default function Page() {
                   ) : (
                     <img
                       className="card-img"
+                      loading="lazy"
+                      decoding="async"
                       src="/xa/assets/default.webp"
                       onError={() => setImgErrors(e => ({ ...e, [i]: true }))}
                       style={{
