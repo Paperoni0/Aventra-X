@@ -6,7 +6,7 @@ const poems = [
     {
         title: "Lara Temaram",
         author: "Regina Laoshi",
-        image: "/assets/Laoshi.webp",
+        image: "assets/Laoshi.webp",
         source: "Regina Laoshi",
         lyrics: `Langit sore tersenyum merekah padaku
 Bibir senja memerah melihatku menahan rindu
@@ -718,7 +718,7 @@ Sebagai dua jiwa yang saling mecinta, selamanya`,
     {
         title: "Sang Pengasih",
         author: "Laurensius Richard Leonard",
-        image: "/assets/Richard.webp",
+        image: "assets/Richard.webp",
         source: "Google",
         lyrics: `Bapa engkau adalah penyelamatku
 Saat aku terluka engkau melindungiku
@@ -782,7 +782,7 @@ Melewati setiap jejak langkah`,
     {
         title: "Persahabatan",
         author: "M. Dzaka Zufaraid Pratama",
-        image: "/assets/Dzaka.webp",
+        image: "assets/Dzaka.webp",
         source: "Google",
         lyrics: `Di antara riuh hari yang kadang melelahkan
 Ada namamu yang selalu terasa pulang
@@ -938,7 +938,7 @@ Alam raya, sumber kehidupan sejati`,
     {
         title: "Tempat Berlabuh",
         author: "Skolastica Selyn Setiawan",
-        image: "/assets/Selyn.webp",
+        image: "assets/Selyn.webp",
         source: "Pinterest",
         lyrics: `Bukan tentang siapa yang pertama datang
 Atau siapa yang paling lama menetap
@@ -1084,7 +1084,7 @@ export default function PoemPage() {
         return () => { document.body.style.overflow = ""; };
     }, [selected]);
 
-    const getImageSrc = (poem) => poem.image || `/assets/${poem.author.split(" ")[0]}.webp`;
+    const getImageSrc = (poem) => poem.image || `assets/${poem.author.split(" ")[0]}.webp`;
 
     const bannerImages = Array.from({ length: 17 }, (_, i) => `assets/banner${i + 1}.webp`);
     const [bannerIndex, setBannerIndex] = useState(0);
@@ -1237,7 +1237,7 @@ export default function PoemPage() {
                                             className="card-img"
                                             loading="lazy"
                                             decoding="async"
-                                            src={!imgErrors[i] ? getImageSrc(poem) : "/xa/assets/default.webp"}
+                                            src={!imgErrors[i] ? getImageSrc(poem) : "assets/default.webp"}
                                             onError={() => setImgErrors(e => ({ ...e, [i]: true }))}
                                             style={{
                                                 width: "100%", height: "auto", display: "block",
@@ -1249,7 +1249,7 @@ export default function PoemPage() {
                                             className="card-img"
                                             loading="lazy"
                                             decoding="async"
-                                            src="/xa/assets/default.webp"
+                                            src="assets/default.webp"
                                             onError={() => setImgErrors(e => ({ ...e, [i]: true }))}
                                             style={{
                                                 width: "100%", height: "auto", display: "block",

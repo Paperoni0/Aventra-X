@@ -13,9 +13,12 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Semesta Memandang Kala Itu",
-  description: "Kumpulan puisi karya anak kelas X.A Maitreyawira Palembang.",
-  manifest: "/manifest.json",
+  metadataBase: new URL("https://aventrax.sytes.net"),
+  title: {
+    default: "Aventra-X",
+    template: "%s | Aventra-X"
+  },
+  description: "Kelas 10A (X.A) SMA Maitreyawira Palembang",
 };
 
 export default function RootLayout({
