@@ -1150,6 +1150,24 @@ export default function PoemPage() {
         .modal-scroll::-webkit-scrollbar { width: 4px; }
         .modal-scroll::-webkit-scrollbar-track { background: transparent; }
         .modal-scroll::-webkit-scrollbar-thumb { background: rgba(74,222,128,0.3); border-radius: 2px; }
+        #home {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        #home a {
+            background-color: #46B83D;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        #home a:hover {
+            background-color: #389431;
+        }
       `}</style>
             <div className="banner" style={{ position: "relative", overflow: "hidden" }}>
                 {bannerImages.map((src, i) => (
@@ -1193,6 +1211,9 @@ export default function PoemPage() {
                     <div style={{ height: "1px", width: "80px", background: "linear-gradient(to left, transparent, #4ade80)" }} />
                 </div>
             </header>
+            <div id="home">
+                <a href="/puisi">Kembali ke Beranda</a>
+            </div>
             <main style={{
                 maxWidth: "900px",
                 margin: "0 auto",
@@ -1385,6 +1406,9 @@ export default function PoemPage() {
                     <div style={{ height: "1px", width: "60px", background: "linear-gradient(to right, transparent, #4ade80)" }} />
                     <span style={{ color: "#4ade80", opacity: 0.5, fontSize: "0.9rem" }}>✦</span>
                     <div style={{ height: "1px", width: "60px", background: "linear-gradient(to left, transparent, #4ade80)" }} />
+                </div>
+                <div id="home">
+                    <a href="/puisi">Kembali ke Beranda</a>
                 </div>
                 <p style={{
                     color: "#4ade80",
