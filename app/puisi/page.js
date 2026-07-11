@@ -1211,7 +1211,7 @@ export default function PoemPage() {
                     <div style={{ height: "1px", width: "80px", background: "linear-gradient(to left, transparent, #4ade80)" }} />
                 </div>
             </header>
-            <div id="home">
+            <div id="home" style={{ marginTop: "0px" }}>
                 <a href="https://batch9mw.home.kg/puisi">Kembali ke Beranda</a>
             </div>
             <main style={{
@@ -1402,13 +1402,13 @@ export default function PoemPage() {
                 borderTop: "1px solid rgba(74,222,128,0.15)",
                 marginTop: "-40px",
             }}>
+                <div id="home">
+                    <a href="https://batch9mw.home.kg/puisi">Kembali ke Beranda</a>
+                </div>
                 <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "12px", marginBottom: "14px" }}>
                     <div style={{ height: "1px", width: "60px", background: "linear-gradient(to right, transparent, #4ade80)" }} />
                     <span style={{ color: "#4ade80", opacity: 0.5, fontSize: "0.9rem" }}>✦</span>
                     <div style={{ height: "1px", width: "60px", background: "linear-gradient(to left, transparent, #4ade80)" }} />
-                </div>
-                <div id="home">
-                    <a href="https://batch9mw.home.kg/puisi">Kembali ke Beranda</a>
                 </div>
                 <p style={{
                     color: "#4ade80",
