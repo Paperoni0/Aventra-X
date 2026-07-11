@@ -1394,8 +1394,7 @@ export default function PoemPage() {
                     margin: 0,
                     fontStyle: "italic",
                 }}>
-                    © {new Date().getFullYear()} Kelas 10A Angkatan 9 Maitreyawira Palembang — Semesta Memandang Kala Itu. All rights reserved.
-                    Supported by DevenSMP Studios
+                    © {new Date().getFullYear()} Kelas 10A Angkatan 9 Maitreyawira Palembang — Semesta Memandang Kala Itu. All rights reserved. Supported by DevenSMP Studios.
                 </p>
             </footer>
         </div>
