@@ -1212,7 +1212,7 @@ export default function PoemPage() {
                 </div>
             </header>
             <div id="home">
-                <a href="/puisi">Kembali ke Beranda</a>
+                <a href="https://batch9mw.home.kg/puisi">Kembali ke Beranda</a>
             </div>
             <main style={{
                 maxWidth: "900px",
@@ -1408,7 +1408,7 @@ export default function PoemPage() {
                     <div style={{ height: "1px", width: "60px", background: "linear-gradient(to left, transparent, #4ade80)" }} />
                 </div>
                 <div id="home">
-                    <a href="/puisi">Kembali ke Beranda</a>
+                    <a href="https://batch9mw.home.kg/puisi">Kembali ke Beranda</a>
                 </div>
                 <p style={{
                     color: "#4ade80",
